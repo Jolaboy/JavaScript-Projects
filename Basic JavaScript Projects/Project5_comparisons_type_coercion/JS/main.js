@@ -95,3 +95,4 @@ let notFalse = !(10 > 100); // 10 < 100 evaluates to false, so !(false) results 
 // Display the results in the HTML
 document.getElementById("not1").textContent = `!(100 > 10) evaluates to: ${notTrue}`;
 document.getElementById("not2").textContent = `!(10 > 100) evaluates to: ${notFalse}`;
+
