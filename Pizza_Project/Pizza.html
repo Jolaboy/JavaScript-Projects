@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Pizza_JavaScript/pizza.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="Pizza_CSS/pizza.css"/>
+</head>
+<body>
+    <div id="menuBG">
+        <h1 style="margin: 0 0px 20px;">Pizza Menu</h1>
+        <h2>Choose Pizza with 1 free topping and £1.00 for each extra topping</h2>
+        <input id="btnOrder" type="button" onclick="getRecipe()"
+            value="Place Order">
+        <form id="frmMenu">
+            <div class="menu left">
+                <h3>Classic Pizzas</h3>
+                <label>
+                    <input class="size" type="radio" name="Size" value="Personal Pizza">
+                    Personal Pizza
+                </label><br>
+                <label>
+                    <input class="size" type="radio" name="Size" value="Small Pizza">
+                    Small Pizza
+                </label><br>
+                <label>
+                    <input class="size" type="radio" name="Size" value="Medium Pizza">
+                    Medium Pizza
+                </label><br>
+                <label>
+                    <input class="size" type="radio" name="Size" value="Large Pizza" checked>
+                    Large Pizza
+                </label><br>
+                <label>
+                    <input class="size" type="radio" name="Size" value="Extra Large Pizza">
+                    Extra Large Pizza
+                </label><br>
+            </div>
+
+            <div class="menu center">
+                <h3>Vegetable Toppings:</h3>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Sweet Peppers">
+                    Sweet Peppers
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Mushrooms">
+                    Mushrooms
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Mixed Vegetables">
+                    Mixed Vegetables
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Red Onions">
+                    Red Onions
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Cherry Tomatoes">
+                    Cherry Tomatoes
+                </label><br>
+            </div>
+
+            <div class="menu right">
+                <h3>Main Toppings:</h3>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Spicy Chicken">
+                    Spicy Chicken
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Black Pepper">
+                    Black Pepper
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Garlic">
+                    Garlic
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Kebab">
+                    Kebab
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Cheese">
+                    Cheese
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Chicken">
+                    Chicken
+                </label><br>
+                <label>
+                    <input class="toppings" type="checkbox" name="Topping" value="Spicy Minced Beef">
+                    Spicy Minced Beef
+                </label><br>
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div> 
+</body>
+</html>
