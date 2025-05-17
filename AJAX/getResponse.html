@@ -1,0 +1,47 @@
+<!--This project is implemented using XAMMP Control Panel and Apache Server-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+</head>
+<body>
+    <div id="bookData"></div>
+    <script>
+        // Function to load XML document and display book data
+        // This function uses XMLHttpRequest to fetch the XML file
+        // and then parses it to extract book information.
+        // The book information is then displayed in the HTML document.
+        // The XML file should be in the same directory as this HTML file.
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayBooks(this);
+                }
+            };
+            xmlhttp.open("GET", "book_authors.xml", true);  // Open the XML file
+            xmlhttp.send();  // Send the request
+        }
+
+        function displayBooks(xml) {   // Function to parse the XML and display book information
+            var xmlDoc = xml.responseXML;
+            var books = xmlDoc.getElementsByTagName("book");
+            var output = "";
+            
+            for (var i = 0; i < books.length; i++) {   // Loop through each book element, extracting elements
+                output += "<h2>" + books[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</h2>";
+                output += "<p>Author: " + books[i].getElementsByTagName("author")[0].childNodes[0].nodeValue + "</p>";
+                output += "<p>Genre: " + books[i].getElementsByTagName("genre")[0].childNodes[0].nodeValue + "</p>";
+                output += "<hr>";
+            }
+            
+            document.getElementById("bookData").innerHTML = output;  // Display the output in the HTML document.
+        }
+
+        // Load the XML when the page loads
+        loadXMLDoc();
+    </script>
+</body>
+</html>
