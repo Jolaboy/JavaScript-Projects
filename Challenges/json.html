@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON JS Reference</title>
+</head>
+<body>
+    <h2>JavaScript JSON Reference</h2>
+    <h2>JSON (JavaScript Object Notation)</h2>
+    <p>JSON is a format for storing and transporting data.</p>
+    <p>JSON is text, and text can be transported anywhere, and read by any programming language.</p>
+    <p>JavaScript Objects can be converted into JSON, and JSON can be converted back into JavaScript Objects.<br>
+       This way we can work with the data as JavaScript objects, with no complicated parsing or translations.</p>
+    
+    <h4>Convert a JavaScript object into a JSON string:</h4>
+    <p id="json1"></p>
+
+    <h4>Convert JSON back to JavaScript object:</h4>
+    <p id="json2"></p>
+
+    <h4>Access parsed JSON data:</h4>
+    <p id="json3"></p>
+
+    <h4>localStorage() Method</h4>
+    <p id="local_storage1"></p>
+    <p id="local_storage2"></p>
+
+    <h4>The Window Object</h4>
+    <h4>The localStorage Property</h4>
+
+    <p><button onclick="clickCounter()" type="button">Click Counter!</button></p>
+
+    <p>Number of clicks: <span id="counter"></span></p>
+
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+
+    <script>
+        // Example 1: Convert object to JSON
+        var obj = { "student":"Amadou", "course":"Computer Science", "gpa":4.7 , "year":2025};
+        var myJSON = JSON.stringify(obj);
+        document.getElementById("json1").innerHTML = myJSON;
+
+        // Example 2: Parse JSON to object
+        var jsonString = '{ "student":"Amadou", "course":"Computer Science", "class":4.7 , "year":2025}';
+        var parsedObj = JSON.parse(jsonString);
+        document.getElementById("json2").innerHTML = 
+            "Parsed object properties: " + parsedObj.student + ", " + parsedObj.course + ", " + parsedObj.class + "," + parsedObj.year;
+
+        // Example 3: Working with parsed data
+        document.getElementById("json3").innerHTML = 
+            "Student + Course from parsed data: " + parsedObj.student + " " + parsedObj.course;
+
+        // Example 4: Using localStorage
+        /* set the data as key and value pair to be saved locally in your browser */
+        localStorage.setItem = ("student", "Amadou");
+        /* use the key "student" to return its value "Amadou"*/
+        document.getElementById("local_storage1").innerHTML = localStorage.getItem("student");
+
+        // Alternative using an object:
+        const studentData = { "student": "Amadou" };
+        localStorage.setItem("studentData", JSON.stringify(studentData));
+        document.getElementById("local_storage2").innerHTML = JSON.parse(localStorage.getItem("studentData")).student;
+        
+        // CLick counter functionality
+        document.getElementById("counter").innerHTML = localStorage.clickcount;
+
+        function clickCounter() {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+        document.getElementById("counter").innerHTML = localStorage.clickcount;
+    }
+// ...existing code...
+
+        // Server communication example (commented out to avoid redirect)
+        /*
+        var serverObj = { "student":"Amadou", "course":"Computer Science", "class":1, "year":2025 };
+        var serverJSON = JSON.stringify(serverObj);
+        // window.location = "demo_json.php?x=" + serverJSON;
+        */
+    </script>
+</body>
+</html>

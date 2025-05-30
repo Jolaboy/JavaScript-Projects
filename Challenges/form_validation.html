@@ -1,0 +1,46 @@
+<!-- Contact form valiadtion using JavaScript-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <!-- Contact form with Eventhandler that will trigger the JS function-->
+    <form name="contactForm" action="/action_page.php" onsubmit="return validationForm()" method="post">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone">
+        <br>
+        <label for="message">Click to Submit</label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Function to validate the form
+        // it checks if all fields are filled out
+        // if not, it will alert the user and return message
+        function validationForm() {
+            var fname = document.forms["contactForm"]["fname"].value;
+            var lname = document.forms["contactForm"]["lname"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var phone = document.forms["contactForm"]["phone"].value;
+            if (fname == "" ,  lname == "", email == "", phone == "") {
+                alert("All fields must be filled out");
+                return false;
+            } else {
+                alert("Form submitted sucessfully");
+                return true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Counter</title>
+    <!-- React CDN links -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="React_Codes"></div>
+    <script type="text/babel">
+        // Functional component
+        const Counter = ({ timePassed }) => {
+            const timePassedRounded = Math.round(timePassed / 100);
+            const secondsPassed = timePassedRounded / 10 + (timePassedRounded % 10 ? '' : '.0');
+            const text = `My React code started running ${secondsPassed} seconds ago!`;
+            
+            return <p>{text}</p>;
+        };
+
+        const startCounting = new Date().getTime();
+        
+        // React rendering
+        const root = ReactDOM.createRoot(document.getElementById('React_Codes'));
+        
+        setInterval(() => {
+            root.render(
+                <Counter timePassed={new Date().getTime() - startCounting} />
+            );
+        }, 50);
+    </script>
+</body>
+</html>

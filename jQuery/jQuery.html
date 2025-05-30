@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        p {
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Hover or Click Me!</p>
+
+    <script>
+        $( "#text" ).on({
+            "click": function() { console.log( "clicked!" ); alert("You hover and clicked the paragraph!"); },
+            "mouseover": function() { console.log( "hovered!" ); $(this).css("color", "blue"); },
+            "mouseout": function() { $(this).css("color", "black"); }
+        });
+    </script>   
+</body>
+</html>

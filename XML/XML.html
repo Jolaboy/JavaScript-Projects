@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Challenge</title>
+</head>
+<body>
+    <p id="XML_Page"></p>
+    <script>
+        var XML_Parser, XML_Document;
+
+        // Create a text string
+        var Footballer = "<footballers>" +
+            "<name>Messi</name>" +
+            "<age>35</age>" +
+            "<team>Inter Miami</team>" +
+            "<position>Forward</position>" +
+            "<nationality>Argentinian</nationality>" +
+            "</footballers>";
+
+        // Create an XML DOM Parser
+        XML_Parser = new DOMParser();
+
+        // Creates a new XML DOM object using the text string
+        XML_Document = XML_Parser.parseFromString(Footballer, "text/xml");
+
+        document.getElementById("XML_Page").innerHTML =
+        XML_Document.getElementsByTagName("team")[0].childNodes[0].nodeValue;
+
+    </script>
+    
+</body>
+</html>

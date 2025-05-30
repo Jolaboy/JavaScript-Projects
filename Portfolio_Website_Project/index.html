@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <!--SEO Improvements-->
+        <meta name="description" content="Amadou Jarju's Portfolio - Full Stack Developer specializing in HTML, CSS, JavaScript, and more">
+        <meta name="keywords" content="web developer, full stack, portfolio, Amadou Jarju">
+        <meta name="author" content="Amadou Jarju">
+        <title>Amadou Jarju</title>
+        <!--Multiple favicon formats added for browser compatibility-->
+        <link rel="icon" type="image/jpg" sizes="32x32" href="images/coding_icon.jpg">
+        <link rel="icon" type="image/jpg" sizes="16x16" href="images/coding_icon.jpg">
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.jpg">
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar" role="navigation" aria-label="Main navigation">
+            <a class="active" href="#Home" aria-current="page">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+
+        <!---Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="video/portfolio.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 Video.
+            </video>
+        </div>
+
+        <!--Video Text-->
+        <div class="Video_Text">
+            <h3 class="white-text">Welcome to Amadou's Portfolio Website</h3>
+            <strong>
+                <p class="center">
+                    <q>The only way to do great work is to love what you do. 
+                        <br>If you haven't found one yet, keep looking.
+                        <br>Don't settle.
+                    </q>
+                    <br> -Steve Jobs
+                    <br>
+                    <br> My name is Amadou Jarju. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br> Feel free to explore and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/coding_icon.jpg" alt="Portrait" loading="lazy">
+                        <div class="text">I'm available for work or collaboration on projects!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/frontend1.jpg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am a Full-Stack Software Developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/git_github1.jpg" alt="Git and GitHub logo"> 
+                        <div class="text">Version Control,<br>Git & GitHub<br>for Code Management and Collaboration,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/python1.jpg" alt="Python logo">
+                        <div class="text">Python(popular and versatile programmong language),</div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/web_stack.jpg" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/sql_database_logo.jpg" alt="SQL logo"> 
+                        <div class="text">Back-End Development, Databases and SQL.</div>
+                    </div>
+                    <!-- Slide 7 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/full_stack_logo.jpg" alt="full stack"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact Me Now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div class="Slideshow-dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--About Section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <video width="100%" controls autoplay muted loop>
+                    <source src="video/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!--Right column-->
+            <div class="Column_1">
+                <h3>About</h3>
+                <p>
+                    As a dedicated software developer, I bring a professional approach and passion for crafting efficient, elegant code solutions.
+                    <br>
+                    My expertise spans the full development stack, including:
+                    Frontend Development(HTML, CSS, JavaScript), Backend Technologies(C#, .NET Framework)
+                    Database Management(SQL), Version Control Systems(Git, GitHub), Python Programming, and
+                    Project Management Methodologies(Agile, Scrum).
+                    <br>I am actively seeking opportunities for professional collaboration and employment. 
+                    My technical proficiency and commitment to excellence make me a valuable addition to any development team.
+                    <br>
+                    <br>For professional inquiries, please utilize the contact button below or LinkedIn to initiate a discussion. 
+                </p>
+            </div>
+        </div>
+
+        <!--Github Section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h3>GitHub</h3>
+                <p>
+                    Please explore my portfolio of projects on GitHub, where you can review my code implementations and development approaches:
+                    <br>
+                    <p class="center"><a href="https://github.com/Jolaboy" target="_blank" rel="noopener">View My GitHub Portfolio</a></p>
+                </p>
+            </div>
+
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/Jolaboy" target="_blank" rel="noopener noreferrer"><img src="./images/GitHub_logo.jpg" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button" title="Click to open form">CONTACT</button>
+            <div class="form-popup" id="contactForm">
+                <form action="https://formspree.io/f/xyzkqoge" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Enter your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Enter your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Enter your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+           </div>
+        </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <p>
+                <p class="center">&copy; Ams Digital Technologies | <a href="https://github.com/Jolaboy" target="_blank" rel="noopener noreferrer" title="Visit Amadou Jarju's GitHub profile">Jolaboy/Amadou Jarju</a></p>
+                <hr>
+                <nav>
+                    <a href="#Home">Home</a> |
+                    <a href="#About">About</a> |
+                    <a href="https://github.com/Jolaboy" target="_blank" rel="noopener">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/amadou-jarju/" target="_blank" rel="noopener">LinkedIn</a>
+                </nav>
+            </p>
+        </footer>
+
+        <!--javaScript link-->
+        <script src="js/portfolio.js"></script>
+    </body>
+</html>

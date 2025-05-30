@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Challenge</title>
+    <style>
+        /* Override default body color */
+        html {
+            background-color: skyblue;
+            text-align: center;
+        }
+        /* Fade-in effect */
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in ;
+       }
+
+       body.fade-in {
+           opacity: 1;
+       }
+    </style>
+</head>
+<body>
+    <h3>Fade Effect with JavaScript</h3>
+    <p>Here's a nice way to fade your pages in using CSS and a bit of JavaScript.<br> 
+    The solution is clean and smooth, with no flickering on load. <br>
+    If JavaScript is disabled, the page will still load but the fade effect will not occur.</p>
+    <h3>How it works</h3>
+    <p>Here's a nice way to fade your pages in using CSS and a bit of JavaScript.<br>
+    The solution is clean and smooth, with no flickering on load. If JavaScript is disabled,<br>
+    the page will still load but the fade effect will not occur.</p>
+    
+    <script>
+        // 
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-in');
+        });
+    </script>
+</body>
+</html>
