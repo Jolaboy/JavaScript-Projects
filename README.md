@@ -29,6 +29,40 @@ A generic calculator with standard operations:<br>
 ➗ Division<br>
 🆑 Reset functionality<br>
 
+## Basic JavaScript Projects(Core JavaScript Implementations)
+This section highlights fundamental JavaScript concepts and their applications:
+- Loops -Handling iteration
+- Arrays – Data collections
+- Expressions - Managing calculations 
+- Window Alerts – User notifications
+- Functions - Executing reusable logic
+- Math Operations – Mathematical calculations
+- Dictionaries -Organizing key-value pairs
+- Comparison Operators – Comparing values
+- Ternary Operators & Conditional Logic – Streamlining decision-making structures
+- Time Functions- Managing execution timing
+- Scope Functions – Variable scope
+- String Methods - Manipulating text 
+- Countdown Slideshow – Creating timed interactions
+
+## Challenges(Advanced Interactive Features)
+This demos showcases implementations of dynamic UI enhancements, including:
+- Zoom In & Out – CSS-powered scaling effects for better user interactions
+- CSS Keyframes Animations – Smooth transitions and animations
+- Autoplay & Fade-In/Fade-Out Slideshow – Automated slides with smooth visibility changes
+- Form Validation Techniques – Ensuring correct user input handling
+- Horizontal Rule Styling – Enhancing section dividers for visual clarity
+- JSON Methods – Parsing and handling structured data efficiently
+- ondbclick Event Handling – Executing actions on double-click events
+- Popup Form Integrations – Creating interactive form submissions
+- Smooth Scrolling Effects – Enhancing navigation experience
+- Sticky Positioning – Improving layout stability for fixed elements
+
+## other projects
+React-Project
+AJAX implementation using XAMMP Apache server<br>
+ToDo App - a user interface where users can input lists of tasks and be able to update and delete task
+
 ## Installation Instructions
 To run these projects locally, follow these steps:<br>
 - Clone the repository<br>
