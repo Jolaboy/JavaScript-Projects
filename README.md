@@ -60,7 +60,7 @@ This demos showcases implementations of dynamic UI enhancements, including:
 
 ## other projects
 React-Project
-AJAX implementation using XAMMP Apache server<br>
+AJAX implementation using XAMPP Apache server<br>
 ToDo App - a user interface where users can input lists of tasks and be able to update and delete task
 
 ## Installation Instructions
