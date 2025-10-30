@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="headerRow">
+            <h1>Weather App</h1>
+            <div class="controls">
+                <label class="unitToggle" title="Toggle units">
+                    <input type="checkbox" id="unitToggle" aria-label="Toggle temperature units" />
+                    <span class="slider" aria-hidden="true"></span>
+                    <span class="labels" aria-hidden="true"><span>°C</span>/<span>°F</span></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="searchContainer">
+            <input
+                class="inputField"
+                id="cityField"
+                aria-label="City name"
+                autocomplete="off"
+                placeholder="Enter City Name..."
+            />
+            <button id="searchBtn" class="searchBtn">Search</button>
+            <ul id="suggestions" class="suggestions hidden" role="listbox" aria-label="City suggestions"></ul>
+        </div>
+
+        <div id="recentSearches" class="recentSearches" aria-label="Recent searches"></div>
+
+        <div id="weatherContainer" class="hidden weatherCard" role="region" aria-live="polite">
+            <div class="skeleton hidden" id="weatherSkeleton" aria-hidden="true">
+                <div class="sk-line sk-title"></div>
+                <div class="sk-line"></div>
+                <div class="sk-line"></div>
+                <div class="sk-line"></div>
+            </div>
+            <div class="iconAndTitle">
+                <div id="weatherIcon" class="weatherIcon" aria-hidden="true"></div>
+                <h2 id="cityName"></h2>
+            </div>
+            <p id="temperature"></p>
+            <p id="condition"></p>
+            <p id="windSpeed"></p>
+        </div>
+
+        <p id="errorMessage" role="alert" aria-live="assertive"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
